@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Thể hiện tính kế thừa
+        // Animal - lớp cha
+        obj = {
+            name: "Mẫn"
+        }
+
+        obj.age = 18
+
+        console.log(obj);
+
+        class Animal{
+            constructor(name) {
+                this.name = name
+                this.age = age
+            }
+            
+            eat() {
+                console.log(`${this.name} is eating`)
+            }
+        }
+
+        // lớp con
+        class Dog extends Animal {
+            constructor(name) {
+                super(name)
+            }
+
+            bark() {
+                console.log(`${this.name} is barking`);
+            }
+        }
+
+        // const myDog = new Dog("Buddy")
+        // myDog.bark()
+        // myDog.eat()
+
+        // const myAnimal = new Animal("Cat")
+        // myAnimal.bark()
+
+        // Tính đa hình:
+
+        class Shape {
+            area() {
+
+            }
+        }
+
+        class Circle extends Shape {
+            constructor(sdie) {
+                super()
+                this.side = side
+            }
+
+            area() {
+                return this.side ** Pi
+            }
+        }
+    </script>
+</body>
+</html>

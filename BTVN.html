@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // Câu 1:
+        // let arr1 = [1,2,3,5]
+        // // Cách 1:
+        // let newArr = arr1.slice()
+        // // Cách 2:
+        // let newArr1 = [...arr1]
+
+        // // Câu 2:
+        // arrA = ["Hello", "Xin chào"]
+        // arrB = ["Bonjour", "Olá"]
+        // // Cách 1:
+        // let waystoSayHello = arrA.concat(arrB)
+        // // Cách 2:
+        // let waystoSayHello1 = [...arrA, ...arrB]
+
+        // // Câu 3:
+        // let arrX = [0,1,2,3,4,5,6,7,8]
+        // let arrSquare = []
+        // // a)
+        // // Cách 1:
+        // for(let i=0; i < arrX.lenght; i++) {
+        //     // arrSquare.push(arrX[i] * arrX[])
+        //     arrSquare.push(Math.pow(arrX[i], 2))
+        // }
+        
+        // // Cách 2:
+        // // let arrSquareMap = arrX.map(number => number * number)
+        // let arrSquareMap = arrX.map(number => Math.pow(number, 2))
+
+        // // b)
+        // let arrOdds = []
+        // // Cách 1:
+        // for(let i = 0; i < arrX.length; i++) {
+        //     if(arrX[i] % 2 != 0) {
+        //         arrOdds.push(arrX[i])
+        //     }
+        // }
+        // // Cách 2:
+        // let arrOddsFillter = arrX.filter(number => number % 2 != 0)
+        // console.log(arrOddsFillter);
+
+        // Câu 4:
+        function filterRange(arr, a, b){
+            const newArr = arr.slice()
+
+            const filteredArr = newArr.filter((value, index) => {
+                return index >= a && index < b
+            })
+
+            return filteredArr
+        }
+
+        const arr = [2, 3, 5, 8, 9]
+        const a = 0
+        const b = 2
+
+        const answer = filterRange(arr, a, b)
+        console.log(answer)
+    </script>
+</body>
+</html>
